@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Comic Sans MS, sans-serif;
+    background-color: #494949;
+    color: white;
+  }
+  
+  #intro {
+    text-align: center;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  #intro button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #1e62cf;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: Comic Sans MS, sans-serif;
+  }
+  
+  #game {
+    position: relative;
+    text-align: center;
+  }
+  
+  #timer {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  #gameCanvas {
+    background-color: #000;
+    display: block;
+    margin: auto;
+    border: 3px solid #222;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  #continuar {
+    position: fixed;               /* Fijo en la pantalla */
+    bottom: 20px;                  /* Separación desde abajo */
+    right: 20px;                   /* Separación desde la derecha */
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  #continuar:hover {
+    background-color: #0056b3;
+  }
+  

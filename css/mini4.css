@@ -1,0 +1,429 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f8fc;
+  margin: 0;
+  padding: 0;
+}
+
+.gmail-ui {
+  max-width: 900px;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 24px;
+  color: #202124;
+  margin-bottom: 20px;
+}
+
+.bandeja {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  bottom: 0;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de mensajes, Spam y Eliminados con scroll */
+.lista-mensajes, .lista-spam, .lista-eliminados {
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 10px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+/* Mensajes de la bandeja */
+.mensaje-lista {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.mensaje-lista:hover {
+  background-color: #f1f3f4;
+}
+
+.mensaje-lista strong {
+  color: #1a73e8;
+}
+
+.mensaje-lista.leido strong {
+  font-weight: normal;
+}
+
+/* Contenido del mensaje */
+.contenido-mensaje {
+  background-color: white;
+  margin-left: 270px;
+  padding: 20px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  width: calc(100% - 270px);
+}
+
+.contenido-mensaje p {
+  margin-bottom: 10px;
+}
+
+/* Botones de acción */
+.boton-eliminar, .boton-spam, .boton-marcar-leido {
+  background-color: #1a73e8;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.boton-eliminar:hover {
+  background-color: #c62828;
+}
+
+.boton-spam:hover {
+  background-color: #ff8f00;
+}
+
+.boton-marcar-leido:hover {
+  background-color: #005c99;
+}
+
+/* Ventanas de error */
+#ventanas {
+  position: relative;
+  z-index: 9999;
+}
+
+.ventana-error {
+  position: fixed;
+  width: 250px;
+  height: 120px;
+  background-color: #fff;
+  border: 2px solid red;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  padding: 10px;
+  z-index: 9999;
+  overflow: hidden;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.ventana-error p {
+  margin: 10px 0 0 0;
+  color: red;
+  font-weight: bold;
+}
+
+/* Imagen del rayo */
+.imagen-rayo {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+/* Animación de hackeo (Terminal) */
+.terminal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  z-index: 9999;
+}
+
+.linea-comando {
+  margin: 10px 0;
+  white-space: nowrap;
+}
+
+.cursor {
+  animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Animación del banco */
+.banco {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8d7da;
+  color: black;
+  font-size: 24px;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  z-index: 9999;
+}
+
+.mensaje-banco {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dinero {
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.barra-carga {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.barra-carga::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  animation: carga 8s linear;
+}
+
+@keyframes carga {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}
+
+/* TERMINAL HACKER */
+.terminal-hack {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: limegreen;
+  font-family: "Courier New", Courier, monospace;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.pantalla-terminal pre {
+  white-space: pre-wrap;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.pantalla-terminal::after {
+  content: "_";
+  animation: blink 1s infinite;
+  color: lime;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ALERTA DGT */
+.fondo-alerta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #8b0000;
+  color: white;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: entradaFondo 0.5s ease-out;
+}
+
+@keyframes entradaFondo {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.contenido-alerta {
+  text-align: center;
+  background-color: #c62828;
+  border: 3px solid yellow;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px yellow;
+  max-width: 80%;
+  animation: aparecerAlerta 0.8s ease-in;
+}
+
+@keyframes aparecerAlerta {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.contenido-alerta h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.contenido-alerta p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.fondo-estafa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #300000;
+  color: white;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-estafa {
+  background-color: #440000;
+  border: 2px solid red;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px red;
+  text-align: center;
+  max-width: 90%;
+  animation: estafaEntrada 0.6s ease;
+}
+
+@keyframes estafaEntrada {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.contenido-estafa h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffaaaa;
+}
+
+.contenido-estafa .formulario-fake {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario-fake input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.formulario-fake button {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario-fake button:hover {
+  background-color: darkred;
+}
+
+.aviso {
+  margin-top: 20px;
+  font-weight: bold;
+  color: orange;
+}
+.continue-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* Color azul */
+  color: white;
+  font-family: 'Comic Sans MS', sans-serif; /* Fuente Comic Sans MS */
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:disabled {
+  background-color: #cccccc; /* Color gris cuando está deshabilitado */
+  cursor: not-allowed;
+}
+
+.continue-btn:hover {
+  background-color: #0056b3; /* Color azul más oscuro cuando se pasa el ratón */
+}
+/* Estilo para la puntuación */
+.score {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 20px;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Resto de estilo (opcional para botones y mensajes) */
+.message button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message button:hover {
+  background-color: #0056b3;
+}
+

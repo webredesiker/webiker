@@ -1,0 +1,79 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Usar la fuente Comic Sans MS */
+    background: url('../imagenes/segu.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Cubrir toda la pantalla */
+    position: relative; /* Posicionamiento relativo para el overlay */
+    color: white; /* Color del texto */
+    display: flex; /* Usar flexbox para centrar el contenedor */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+
+.bienvenida-container {
+    background-color: #ffffff; /* Fondo blanco opaco para el contenedor */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    width: 90%; /* Ancho del contenedor */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar el contenedor */
+}
+
+.bienvenida-titulo {
+    font-size: 46px; /* Tamaño del título */
+    margin-bottom: 20px; /* Margen inferior */
+    color: #ff6666; /* Color del título (rojo suave claro) */
+    text-align: center; /* Centrar el título */
+    font-weight: bold; /* Negrita para el título */
+}
+
+.mensaje-con-imagen {
+    display: flex; /* Usar flexbox para alinear imagen y texto */
+    align-items: center; /* Alinear la imagen con el centro del texto */
+}
+
+.imagen-senal {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-right: 10px; /* Espaciado entre imagen y texto */
+}
+
+.mensaje-principal {
+    font-size: 20px; /* Tamaño del mensaje principal */
+    color: #ff6666; /* Color del texto (rojo suave claro) */
+    font-weight: normal; /* Peso normal para el texto */
+    line-height: 1.5; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+.mensaje {
+    font-size: 28px; /* Tamaño del título */
+    color: #ff6666; /* Color del texto (rojo suave claro) */
+    font-weight: normal; /* Peso normal para el texto */
+    line-height: 1.5; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+/* Estilo para el botón */
+.boton-iniciar {
+    position: absolute; /* Posicionar el botón en la esquina */
+    bottom: 20px; /* Espacio desde el fondo */
+    right: 20px; /* Espacio desde la derecha */
+    padding: 12px 24px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño de la fuente del botón (ajustado a 20px) */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.boton-iniciar:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}

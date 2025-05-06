@@ -1,0 +1,141 @@
+body {
+    background-image: url('../imagenes/segu.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: black; /* Color del texto */
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo del panel (blanco con opacidad) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.options-container {
+    margin: 20px auto; /* Centrar el área de opciones */
+    width: 80%; /* Ancho del área de opciones */
+    max-width: 800px; /* Tamaño máximo para el área de opciones */
+    height: auto; /* Altura automática */
+    position: relative; /* Mantener el área de opciones en su lugar */
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0; /* Sin margen para el contenedor de opciones */
+}
+
+.option {
+    background-color: blue; /* Color azul para las opciones */
+    color: white; /* Color del texto de las opciones */
+    padding: 10px;
+    margin: 5px; /* Espaciado entre opciones */
+    border-radius: 5px;
+    cursor: grab;
+    width: 150px; /* Ancho fijo para las opciones */
+    text-align: center;
+}
+
+.option:active {
+    cursor: grabbing;
+}
+
+.invisible {
+    opacity: 0; /* Hacer que la opción sea completamente transparente */
+    pointer-events: none; /* Evitar que se pueda interactuar con ellas */
+}
+
+.dropzones {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.dropzone {
+    background-color: black; /* Fondo negro para las zonas de soltar */
+    border: 2px solid black; /* Borde continuo negro */
+    border-radius: 10px;
+    width: 250px; /* Ancho ajustado para las zonas de soltar */
+    height: 200px; /* Altura fija para las zonas de soltar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinear al inicio */
+    margin: 0 20px;
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+    padding: 10px; /* Espaciado interno */
+}
+
+.dropzone h2 {
+    margin: 0;
+    color: white; /* Color del texto en las zonas de soltar */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #007BFF; /* Color azul para el botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: block; /* Hacer que el botón sea visible */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+.hide {
+    display: none; /* Clase para ocultar elementos durante el arrastre */
+}
+
+#score {
+    position: absolute; /* Posición absoluta para colocar en la esquina superior izquierda */
+    top: 80px; /* Distancia desde la parte superior */
+    left: 80px; /* Distancia desde la izquierda */
+    font-size: 32px; /* Aumentar el tamaño de la fuente */
+    font-weight: normal; /* Texto en negrita */
+    color: rgb(0, 0, 0); /* Color del texto para mejor visibilidad */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+#aciertos {
+    position: absolute; /* Posición absoluta para colocar en la esquina superior derecha */
+    top: 80px; /* Distancia desde la parte superior */
+    right: 80px; /* Distancia desde la derecha */
+    font-size: 32px; /* Aumentar el tamaño de la fuente */
+    font-weight: normal; /* Texto en negrita */
+    color: rgb(0, 0, 0); /* Color del texto para mejor visibilidad */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+#submit {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#continueButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+#continueButton:hover {
+    background-color: #005be5;
+}

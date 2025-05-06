@@ -1,0 +1,153 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS */
+    background-image: url('../imagenes/segu.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0; /* Eliminar márgenes por defecto */
+    position: relative; /* Para posicionar el botón de regreso */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo del panel (blanco con opacidad) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.panel {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.letra {
+    font-size: 24px; /* Tamaño de las letras más pequeño para que quepan mejor */
+    width: 40px; /* Ancho fijo para las letras */
+    height: 40px; /* Alto fijo para las letras */
+    border: 2px solid #333; /* Borde de las letras */
+    border-radius: 5px; /* Esquinas redondeadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Espaciado entre letras */
+    background-color: #fff; /* Fondo blanco para las letras */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Convertir a mayúsculas */
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+.boton {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    transition: background-color 0.3s;
+    margin: 0 5px; /* Espaciado entre botones */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS */
+}
+
+.boton:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+#input-letra {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS */
+}
+
+#input-letra:focus {
+    outline: none; /* Elimina el contorno al enfocar */
+}
+
+#input-letra::placeholder {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS para el texto del placeholder */
+}
+
+.mensaje {
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+}
+
+/* Estilo para el botón de regresar */
+.boton-link {
+    position: absolute; /* Posicionar el botón en la esquina */
+    bottom: 20px; /* Espacio desde el fondo */
+    left: 20px; /* Espacio desde la izquierda */
+    padding: 12px 24px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño de la fuente del botón */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545; /* Color del botón (rojo) */
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS */
+}
+
+.boton-link:hover {
+    background-color: #c82333; /* Color del botón al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.boton-continuar:hover {
+    background-color: #1f359b; /* Color del botón al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Estilo para el botón de continuar */
+.boton-continuar {
+    position: absolute; /* Posicionar el botón en la esquina */
+    bottom: 20px; /* Espacio desde el fondo */
+    left: 1370px; /* Espacio desde la izquierda */
+    padding: 12px 24px; /* Espaciado interno del botón */
+    font-size: 20px; /* Tamaño de la fuente del botón */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #2b36c6; /* Color del botón (azul) */
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cambiado a Comic Sans MS */
+}
+
+/* Estilo para las puntuaciones */
+.puntuacion {
+    font-size: 2em; /* Aumenta el tamaño del texto de las puntuaciones */
+    position: absolute; /* Posiciona el elemento de forma absoluta */
+    top: 50px; /* Espacio desde la parte superior */
+    right: 10px; /* Espacio desde la izquierda */
+}
+
+/* Estilo para las letras usadas */
+.letras-falladas {
+    font-size: 2em; /* Aumenta el tamaño del texto de las letras usadas */
+    position: absolute; /* Posiciona el elemento de forma absoluta */
+    top: 50px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la derecha */
+}

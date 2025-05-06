@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación de Opciones</title>
+    <link rel="stylesheet" href="../css/mini1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Qué deberías compartir en redes sociales?</h1>
+        <h3>Hay cosas que si puedes, pero cuanto menos compartas mejor :)</h3>
+
+        <div id="score">Puntuación: 0</div>
+        <div id="aciertos" class="correct-answers">Has acertado: 0/10</div>
+
+        <div class="options-container">
+            <div class="options">
+                <div class="option" draggable="true">Tu nombre</div>
+                <div class="option" draggable="true">Intereses o pasatiempos</div>
+                <div class="option" draggable="true">Tu DNI</div>
+                <div class="option" draggable="true">Tu número de teléfono</div>
+                <div class="option" draggable="true">Tu dirección de casa</div>
+                <div class="option" draggable="true">Fotos de viajes o eventos públicos</div>
+                <div class="option" draggable="true">Opiniones</div>
+                <div class="option" draggable="true">Fotos de tu familia</div>
+                <div class="option" draggable="true">Contenido entretenido</div>
+                <div class="option" draggable="true">Tus contraseñas</div>
+            </div>
+        </div>
+
+        <div class="dropzones">
+            <div class="dropzone" id="goodZone">
+                <h2>Si puedes</h2>
+            </div>
+            <div class="dropzone" id="badZone">
+                <h2>No deberías</h2>
+            </div>
+        </div>
+
+        <button id="submit">Enviar</button>
+    </div>
+
+    <script src="../js/mini1.js"></script>
+</body>
+</html>

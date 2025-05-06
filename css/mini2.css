@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-image: url('../imagenes/segu.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+#juego {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgba(204, 231, 255, 0.8); /* Fondo suave */
+    overflow: hidden;
+}
+
+#jugador {
+    width: 200px; /* Tamaño más grande */
+    height: 200px;
+    background-image: url('../imagenes/patapim.png'); /* Cambia esto por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 100px;
+    bottom: 10px;
+    z-index: 2;
+  }
+  
+
+.mensaje {
+    position: absolute;
+    top: -40px;
+    left: calc(var(--x, 0.5) * 90%);
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff; /* Texto blanco */
+    font-size: 14px;
+    text-align: center;
+    border: 2px solid transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+.mensaje.bueno {
+    background: #333; /* Fondo oscuro */
+    border-color: green; /* Línea verde */
+}
+
+.mensaje.malo {
+    background: #333; /* Fondo oscuro */
+    border-color: red; /* Línea roja */
+}
+
+#puntos, #tiempo {
+    position: absolute;
+    top: 10px;
+    font-size: 32px; /* Aumentado a 32px */
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+#puntos {
+    left: 10px;
+}
+
+#tiempo {
+    right: 10px;
+}
+
+.critico {
+    background: #ff6347; /* Color rojo si el tiempo está en los últimos 10 segundos */
+}
+
+@keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .critico {
+    color: red;
+    animation: mover 0.5s ease-in-out infinite;
+  }
+  

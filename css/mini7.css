@@ -1,0 +1,258 @@
+/* Reset y estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Comic Sans MS, sans-serif; /* Cambié la fuente a Comic Sans MS */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Pantalla de introducción */
+#intro-screen {
+    margin-top: 50px;
+}
+
+#intro-screen h1 {
+    font-size: 30px;
+    color: #333;
+}
+
+#intro-screen p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+#start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}
+
+/* Caja de juego (tablero) */
+#game-board {
+    position: relative;
+    width: 545px;
+    height: 635px;
+    background-color: #222;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    grid-gap: 0;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Estilo de las piezas */
+.block {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Colores aleatorios de las piezas */
+.block.good {
+    background-color: #00ff00;
+}
+
+.block.bad {
+    background-color: red;
+}
+
+.block.color1 {
+    background-color: #ff5733; /* Rojo */
+}
+
+.block.color2 {
+    background-color: #33c1ff; /* Azul */
+}
+
+.block.color3 {
+    background-color: #ffb833; /* Amarillo */
+}
+
+.block.color4 {
+    background-color: #9b33ff; /* Púrpura */
+}
+
+.block.color5 {
+    background-color: #33ff57; /* Verde */
+}
+
+.block.color6 {
+    background-color: #ff33a8; /* Rosa */
+}
+
+.block.color7 {
+    background-color: #ffff33; /* Amarillo brillante */
+}
+
+/* Estilo de las piezas con emojis dentro (si se usan) */
+.block span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Estilo del marcador de puntaje */
+#timeDisplay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+/* Ajustar los bordes de la caja de juego */
+#game-board {
+    border: 3px solid black;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Asegurarse de que las piezas encajen bien dentro de la caja */
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustes para el contenedor global y la página */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Estilo para mostrar la siguiente pieza */
+#next-piece {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #333;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Lista de emojis */
+#emoji-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.emoji-item {
+    width: 120px;
+    margin: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.emoji-item p {
+    font-size: 14px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* espacio entre emoji y texto */
+}
+
+.emoji-item.good {
+    background-color: #e0ffe0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.emoji-item.bad {
+    background-color: #ffcccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.emoji-item span {
+    font-size: 30px;
+}
+
+.continue-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #3568d0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Comic Sans MS;
+}
+
+.continue-btn:hover {
+    background-color: #2355a4;
+}
+
+
+/* 🎯 Estilos añadidos: resumen de emojis buenos y malos */
+#emoji-summary {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    width: 190px;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+}
+
+.emoji-group {
+    margin-bottom: 15px;
+}
+
+.emoji-group h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.emoji-line {
+    font-size: 22px;
+    line-height: 1.5;
+}

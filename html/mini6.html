@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MiniJuego 6 - Geolocalización</title>
+  <link rel="stylesheet" href="../css/mini6.css">
+</head>
+<body>
+  <div id="intro">
+    <h1>¡Cuidado con Tralalero Tralala!</h1>
+    <p>
+      Tu amigo Tralalero Tralala quiere hacerte una foto para subirla a Instagram poniedo la ubicación. 
+      ¡Evita que te saque en la foto! Cuando empiece la cuenta atrás, muévete rápido y escóndete detrás de algo.
+    </p>
+    <img id="introImage" src="../imagenes/tralalero.png" alt="Imagen de introducción">
+    <button id="startBtn">¡Listo!</button>
+  </div>
+
+  <div id="game" style="display: none;">
+    <div id="timer">Tiempo: 10</div>
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+    <div id="result" class="hidden"></div>
+  </div>
+  <a href="../html/mini7.html">
+    <button id="continuar">Continuar</button>
+  </a>
+  <script src="../js/mini6.js"></script>
+</body>
+</html>

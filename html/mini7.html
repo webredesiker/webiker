@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Tetris de Privacidad</title>
+    <link rel="stylesheet" href="../css/mini7.css">
+</head>
+<body>
+    <!-- Pantalla de Introducción -->
+    <div id="intro-screen">
+        <h1>¡Bienvenido al Juego de Tetris de Privacidad!</h1><br>
+        <h2>¡Importante que leas los emogis antes de empezar!</h2>
+        <p>Aprende a proteger tu privacidad mientras juegas.</p>
+        <button id="start-button">Listo para Jugar</button>
+        
+        <!-- Lista de Emojis con sus descripciones -->
+        <div id="emoji-list">
+            <div class="emoji-item good">
+                <span>👍</span>
+                <p>Acepta lo bueno y bloquea lo que pone en riesgo tu seguridad.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>🛡️</span>
+                <p>Protege tu información con contraseñas fuertes.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>🔒</span>
+                <p>Asegura tus cuentas con autenticación en dos pasos.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>🌐</span>
+                <p>No compartas tu ubicación en tiempo real.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>🙋‍♀️</span>
+                <p>Defiende tu privacidad online.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>📵</span>
+                <p>No caigas en distracciones inseguras.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>🧑‍💻</span>
+                <p>Comporta de manera responsable en línea.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>💬</span>
+                <p>Sé respetuoso en tus conversaciones online.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>🔍</span>
+                <p>Verifica los enlaces antes de hacer clic.</p>
+            </div>
+            <div class="emoji-item good">
+                <span>📚</span>
+                <p>Educa sobre seguridad en redes sociales.</p>
+            </div>
+
+            <div class="emoji-item bad">
+                <span>📸</span>
+                <p>No compartas fotos privadas.</p>
+            </div>
+            <div class="emoji-item bad">
+                <span>💣</span>
+                <p>No difundas rumores ni información falsa.</p>
+            </div>
+            <div class="emoji-item bad">
+                <span>😞</span>
+                <p>No publiques lo que te haga sentir incómodo.</p>
+            </div>
+            <div class="emoji-item bad">
+                <span>⚠️</span>
+                <p>Cuidado con los enlaces sospechosos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caja de juego (tablero) -->
+    <div id="game-container" style="display:none;">
+        <div id="timeDisplay">Tiempo: 333 segundos</div>
+
+        <!-- Nueva sección con los emojis buenos y malos -->
+        <div id="emoji-summary">
+            <div class="emoji-summary-section">
+                <h3>Emojis Buenos ✅</h3>
+                <p>👍 🛡️ 🔒 🌐 🙋‍♀️ 📵 🧑‍💻 💬 🔍 📚</p>
+            </div>
+            <div class="emoji-summary-section">
+                <h3>Emojis Malos ❌</h3>
+                <p>📸 💣 😞 ⚠️</p>
+            </div>
+        </div>
+
+        <div id="game-board"></div>
+        <button id="continue-button" class="continue-btn" style="display:none;" onclick="window.location.href='../html/mini8.html'">Continuar</button>
+    </div>
+
+    <script src="../js/mini7.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../imagenes/combate.png') no-repeat top left;
+  background-size: 100% 100%;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Press Start 2P';
+}
+
+#movimientos-img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 1530px;
+  height: auto;
+  transform: scaleX(1.02);
+  z-index: 1;  /* Aseguramos que la imagen esté detrás de los botones */
+}
+.movible1, .movible5, .movible9, .movible13, .movible17 {
+  position: absolute; /* Necesario para mover el botón */
+  bottom: 106px; /* Distancia desde la parte inferior */
+  right: 422px;  /* Distancia desde la parte derecha */
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #00000000;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10; /* Asegura que el botón esté encima de otros elementos */
+  width: 310px;
+  height: 55px;
+  font-family: 'Press Start 2P';
+  color: #505058;
+  text-shadow: 2px 2px 0 #A0A0A8; /* Sombra más visible, gris suave */
+  font-size: 20px;
+}
+.movible2, .movible6, .movible10, .movible14, .movible18 {
+  position: absolute; /* Necesario para mover el botón */
+  bottom: 106px; /* Distancia desde la parte inferior */
+  right: 35px;  /* Distancia desde la parte derecha */
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #00000000;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10; /* Asegura que el botón esté encima de otros elementos */
+  width: 310px;
+  height: 55px;
+  font-family: 'Press Start 2P';
+  color: #505058;
+  text-shadow: 2px 2px 0 #A0A0A8; /* Sombra más visible, gris suave */
+  font-size: 20px;
+}
+
+.movible3, .movible7, .movible11, .movible15, .movible19 {
+  position: absolute; /* Necesario para mover el botón */
+  bottom: 26px; /* Distancia desde la parte inferior */
+  right: 422px;  /* Distancia desde la parte derecha */
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #00000000;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10; /* Asegura que el botón esté encima de otros elementos */
+  width: 310px;
+  height: 55px;
+  font-family: 'Press Start 2P';
+  color: #505058;
+  text-shadow: 2px 2px 0 #A0A0A8; /* Sombra más visible, gris suave */
+  font-size: 20px;
+}
+
+.movible4, .movible8, .movible12, .movible16, .movible20 {
+  position: absolute; /* Necesario para mover el botón */
+  bottom: 26px; /* Distancia desde la parte inferior */
+  right: 35px;  /* Distancia desde la parte derecha */
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #00000000;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10; /* Asegura que el botón esté encima de otros elementos */
+  width: 310px;
+  height: 55px;
+  font-family: 'Press Start 2P';
+  color: #505058;
+  text-shadow: 2px 2px 0 #A0A0A8; /* Sombra más visible, gris suave */
+  font-size: 20px;
+}
+/* Botones 5 a 20, siguiendo el patrón de los anteriores */
+
+/* Imágenes de vida */
+/* Vida de Pidgey */
+
+.imagen1, .imagen2, .imagen3, .imagen4, .imagen5 {
+    position: absolute;
+    top: 136px;     /* Mueve la imagen hacia abajo */
+    left: -4px;     /* Mueve la imagen hacia la derecha */
+    width: 610px;   /* Ancho de la imagen */
+    height: auto;   /* Altura automática para mantener proporción */
+    display: none;
+}

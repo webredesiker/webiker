@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minijuego de Seguridad en Redes</title>
+  <link rel="stylesheet" href="../css/mini3.css">
+</head>
+<body>
+  <!-- Pantalla de bienvenida -->
+  <div id="bienvenida">
+    <div id="texto-bienvenida">
+      <p>Bienvenido al juego de las elecciones, elige bien tus opciones para que Tung Tung Tung Sahur no sepa quién eres ni tus datos privados o te hackeará. Si estás listo para empezar, dale a continuar.</p>
+    </div>
+    <div id="imagen-bienvenida">
+      <img src="../imagenes/saur.png" alt="Personaje" id="imagen-saur">
+    </div>
+    <button id="boton-continuar">Listo</button>
+  </div>
+
+  <!-- Pantalla del juego -->
+  <div id="juego" style="display:none;">
+    <div id="personaje">
+      <img src="../imagenes/saur.png" alt="Personaje" id="personaje-imagen">
+    </div>
+    <div class="puerta" id="puerta1">
+      <div class="contenido-puerta">saur</div>
+    </div>
+    <div class="puerta" id="puerta2">
+      <div class="contenido-puerta">sahur</div>
+    </div>
+    <div id="dialogo">
+      <p>si tuvieses que elegir entre tung</p>
+    </div>
+  </div>
+  <button id="myButton">Continuar</button>
+
+  <script src="../js/mini3.js"></script>
+</body>
+</html>

@@ -2,7 +2,6 @@ const jugador = document.getElementById('jugador');
 const juego = document.getElementById('juego');
 const puntosDisplay = document.getElementById('puntos');
 const tiempoDisplay = document.getElementById('tiempo');
-const sonidoCuentaRegresiva = new Audio('sonidos/cuenta.mp3'); // Ruta al archivo de sonido
 
 let puntos = 0;
 let tiempo = 60;
@@ -13,26 +12,16 @@ let posY = 10;
 let juegoTerminado = false;
 
 let mensajes = [
-  { texto: "🔒 Activa la verificación en dos pasos para proteger tu cuenta", bueno: true },
-  { texto: "📞 Publica tu número en tu perfil para que todos puedan contactarte", bueno: false },
-  { texto: "🤫 Comparte solo lo necesario y evita detalles personales", bueno: true },
-  { texto: "🏠 Sube fotos mostrando tu casa y dirección exacta", bueno: false },
-  { texto: "🔐 Cambia tus contraseñas con frecuencia y mantenlas en secreto", bueno: true },
-  { texto: "📸 Publica todas tus fotos sin preocuparte por la privacidad", bueno: false },
-  { texto: "👮 Informa y bloquea a usuarios que se comporten mal contigo", bueno: true },
-  { texto: "💬 Comparte capturas de conversaciones privadas sin permiso", bueno: false },
-  { texto: "🙅‍♂️ Rechaza solicitudes de personas desconocidas", bueno: true },
-  { texto: "🤳 Etiqueta tu ubicación en todas tus publicaciones", bueno: false },
-  { texto: "🧠 Piensa antes de publicar: lo que subes se queda en Internet", bueno: true },
-  { texto: "📂 Guarda documentos privados como DNI o contratos en tus redes", bueno: false },
-  { texto: "🔎 Revisa la configuración de privacidad en cada red social", bueno: true },
-  { texto: "📢 Publica todo lo que haces cada día para que todos lo sepan", bueno: false },
-  { texto: "🔒 Haz que solo tus amigos puedan ver tus publicaciones", bueno: true },
-  { texto: "📝 Escribe tu dirección y colegio en tu biografía", bueno: false },
-  { texto: "🛡️ Denuncia contenido ofensivo o sospechoso", bueno: true },
-  { texto: "📤 Reenvía mensajes de sorteos sin comprobar si son reales", bueno: false },
-  { texto: "💡 Lee bien antes de hacer clic en enlaces o descargar archivos", bueno: true },
-  { texto: "🤑 Haz clic en todos los links que prometen regalos", bueno: false }
+  { imagen: '../imagenes/mayau.jpg', bueno: true }, // Cambié el texto por imágenes
+  { imagen: '../imagenes/casita.jpg', bueno: false },
+  { imagen: '../imagenes/tiburon.jpg', bueno: true },
+  { imagen: '../imagenes/uniforme.jpg', bueno: false },
+  { imagen: '../imagenes/litri.jpg', bueno: true },
+  { imagen: '../imagenes/matri.jpg', bueno: false },
+  { imagen: '../imagenes/palomitas.jpg', bueno: true },
+  { imagen: '../imagenes/ubi.jpg', bueno: false },
+  { imagen: '../imagenes/molinon.jpg', bueno: true },
+  { imagen: '../imagenes/dni.jpg', bueno: false },
 ];
 
 function actualizarPuntos() {
@@ -61,7 +50,14 @@ function crearMensaje() {
   const div = document.createElement('div');
   div.classList.add('mensaje');
   div.classList.add(msg.bueno ? 'bueno' : 'malo');
-  div.textContent = msg.texto;
+
+  // Crear una imagen en lugar de texto
+  const img = document.createElement('img');
+  img.src = msg.imagen;
+  img.alt = 'Mensaje';
+  img.style.width = '100px'; // Ajustar tamaño de las imágenes
+  img.style.height = '100px'; // Ajustar tamaño de las imágenes
+  div.appendChild(img);
 
   let x = Math.random();
   div.style.setProperty('--x', x);

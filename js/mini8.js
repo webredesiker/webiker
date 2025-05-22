@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Si es el botón 5, redirigir después de 6 segundos
       if (botonId === 'boton5') {
         setTimeout(() => {
-          window.location.href = '../html/mini9.html'; // Redirige a mini9.html después de 6 segundos
+          window.location.href = '../html/intro9.html'; // Redirige a mini9.html después de 6 segundos
         }, 11000); // 6000 milisegundos = 6 segundos
       }
     } else {

@@ -23,8 +23,8 @@ body, html {
 }
 
 #jugador {
-    width: 200px; /* Tamaño más grande */
-    height: 200px;
+    width: 150px; /* Tamaño más grande */
+    height: 150px;
     background-image: url('../imagenes/patapim.png'); /* Cambia esto por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
@@ -39,7 +39,7 @@ body, html {
     position: absolute;
     top: -40px;
     left: calc(var(--x, 0.5) * 90%);
-    width: 180px;
+    width: 160px;
     padding: 10px;
     border-radius: 10px;
     color: #fff; /* Texto blanco */

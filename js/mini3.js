@@ -10,36 +10,36 @@ let preguntas = [
   {
     mensaje: "Tung Tung Tung Sahur quiere tu número de teléfono... ¿Se lo das?",
     respuestas: [
-      { texto: "No compartir tu número", esBuena: true },
-      { texto: "Compartir tu número", esBuena: false }
+      { texto: "No que no lo conozco bien", esBuena: true },
+      { texto: "Si, aunque no lo conozca", esBuena: false }
     ]
   },
   {
     mensaje: "Tung Tung Tung Sahur quiere saber tu ubicación exacta... ¿Se la dices?",
     respuestas: [
-      { texto: "No compartir mi ubicación", esBuena: true },
-      { texto: "Compartir mi ubicación", esBuena: false }
+      { texto: "No con saberla yo y mis padres suficiente", esBuena: true },
+      { texto: "Claro que más da", esBuena: false }
     ]
   },
   {
     mensaje: "Tung Tung Tung Sahur quiere ver tus documentos personales... ¿Se los enseñas?",
     respuestas: [
-      { texto: "No compartir documentos", esBuena: true },
-      { texto: "Compartir documentos", esBuena: false }
+      { texto: "No eso es algo privado mío", esBuena: true },
+      { texto: "Obvio que puede salir mal", esBuena: false }
     ]
   },
   {
     mensaje: "Tung Tung Tung Sahur quiere conocer tu dirección... ¿Se la das?",
     respuestas: [
-      { texto: "No revelar mi dirección", esBuena: true },
-      { texto: "Revelar mi dirección", esBuena: false }
+      { texto: "No, es peligroso para mi y mi familia", esBuena: true },
+      { texto: "Se la doy porque quiere mandarme caramelos", esBuena: false }
     ]
   },
   {
     mensaje: "Tung Tung Tung Sahur quiere que subas fotos comprometedoras... ¿Lo haces?",
     respuestas: [
-      { texto: "No compartir fotos", esBuena: true },
-      { texto: "Compartir fotos comprometedoras", esBuena: false }
+      { texto: "No, para que voy a subir mis fotos privadas", esBuena: true },
+      { texto: "Claro en redes sociales se sube de todo", esBuena: false }
     ]
   }
 ];
@@ -121,7 +121,7 @@ function siguientePregunta() {
 function manejarRespuesta(respuestaCorrecta) {
   if (respuestaCorrecta) {
     respuestasCorrectas++;
-    dialogo.textContent = "¡Bien! Estás alejándote de ser hackeado por Tung Tung Tung Sahur.";
+    dialogo.textContent = "¡Bien! Estás alejándote de ser atacado por Tung Tung Tung Sahur.";
   } else {
     dialogo.textContent = "¡Vaya! Tung Tung Tung Sahur te está robando información.";
   }
@@ -150,5 +150,5 @@ botonContinuar.addEventListener('click', () => {
   actualizarDialogo(opcion);
 });
 document.getElementById('myButton').addEventListener('click', function() {
-  window.location.href = '../html/mini4.html';
+  window.location.href = '../html/intro4.html';
 });

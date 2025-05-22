@@ -3,6 +3,9 @@ const gameBoard = document.getElementById('game-board');
 const scoreElement = document.getElementById('score');
 let activePiece = null;
 let blocks = [];
+let score = 0;
+let isGameOver = false;
+
 const boardWidth = 18;  // Ancho del tablero
 const boardHeight = 21; // Altura del tablero
 
@@ -107,15 +110,22 @@ function drawPiece() {
 
 // Función para mover la pieza hacia abajo
 function movePieceDown() {
+    if (isGameOver) return; // 🛑 Evita seguir si ya se perdió
+
     pieceY++;
     if (checkCollision()) {
-        pieceY--; // Revertir movimiento
+        pieceY--;
         freezePiece();
         clearFullLines();
-        newPiece();
+        checkGameOver();
+        if (!isGameOver) {
+            newPiece();
+        }
     }
-    drawPiece(); // Redibujar la pieza
+    drawPiece();
 }
+
+
 
 // Función para comprobar si hay colisión
 function checkCollision() {
@@ -264,10 +274,23 @@ let timeInterval; // Variable para almacenar el intervalo del tiempo
 // Función para iniciar el contador de tiempo
 function startTimer() {
     timeInterval = setInterval(() => {
-        timeElapsed--; // Incrementa el tiempo en 1 segundo
-        document.getElementById("timeDisplay").innerText = "Tiempo: " + timeElapsed + " segundos"; // Actualiza el texto en el div
-    }, 1000); // 1000 ms = 1 segundo
+        if (isGameOver) {
+            clearInterval(timeInterval); // Detiene el contador si el jugador pierde antes
+            return;
+        }
+
+        if (timeElapsed > 0) {
+            timeElapsed--; // Disminuye el tiempo
+            document.getElementById("timeDisplay").innerText = "Tiempo: " + timeElapsed + " segundos";
+        } else {
+            clearInterval(timeInterval); // Detiene el contador cuando llega a 0
+            document.getElementById("timeDisplay").innerText = "Tiempo: 0 segundos";
+            winGame(); // 🎉 Llama a la función de victoria
+        }
+    }, 1000);
 }
+
+
 
 // Llamada a startTimer() al inicio del juego
 document.getElementById('start-button').addEventListener('click', () => {
@@ -289,5 +312,16 @@ document.getElementById('game-board').addEventListener('click', () => {
     // Redirige a mini8.html
     window.location.href = '../html/mini8.html';
   });
-  
+  function gameOver() {
+    isGameOver = true;
+    clearInterval(gameInterval);
+    alert('¡Fin del juego! Tu puntaje fue: ' + score);
+}
+
+function winGame() {
+    isGameOver = true;
+    clearInterval(gameInterval); // Detiene el juego
+    alert("¡Has ganado! 🎉");
+}
+
   

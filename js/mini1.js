@@ -62,7 +62,7 @@ submitButton.addEventListener('click', () => {
     correctAnswers = 0;
 
     const goodResponses = Array.from(goodZone.children).map(option => option.innerText);
-    const correctGoodResponses = ['Tu nombre', 'Opiniones', 'Contenido entretenido', 'Fotos de viajes o eventos públicos', 'Intereses o pasatiempos'];
+    const correctGoodResponses = ['Tus comidas favoritas', 'Opiniones', 'Contenido entretenido', 'Fotos de viajes o eventos públicos', 'Intereses o pasatiempos'];
 
     goodResponses.forEach(response => {
         if (correctGoodResponses.includes(response)) {
@@ -104,7 +104,7 @@ function showContinueButton() {
     continueButton.id = 'continueButton';
     continueButton.innerText = 'Continuar';
     continueButton.onclick = () => {
-        window.location.href = '../html/mini2.html';
+        window.location.href = '../html/intro2.html';
     };
     document.body.appendChild(continueButton);
 }
